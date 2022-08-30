@@ -20,8 +20,18 @@
     <%= form.text_area :body %>
   </div>
 
+  <div class="submit">
+    <%= form.submit %>
+  </div>
+
  <% end %>
 
 <%= month_calendar do |date| %>
   <%= date.day %>
+
+  <% @events.each do |event| %>
+    <div>
+      <%= event.title %>
+    </div>
+  <% end %>
 <% end %>
